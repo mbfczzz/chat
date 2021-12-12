@@ -1,0 +1,81 @@
+server:
+  port: 1028
+spring:
+  application:
+    name: user
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 218.78.33.135:8848
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/gradution?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      initial-size: 5 #连接池初始化大小
+      min-idle: 10 #最小空闲连接数
+      max-active: 20 #最大连接数
+      web-stat-filter:
+        exclusions: "*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*" #不统计这些请求数据
+      stat-view-servlet: #访问监控网页的登录用户名和密码
+        login-username: druid
+        login-password: druid
+    driver-class-name: com.mysql.jdbc.Driver
+  redis:
+    database: 0
+    host: 218.78.33.135        # Redis服务器地址
+    port: 6379              # Redis服务器连接端口
+    password: mbfczzzz              # Redis服务器连接密码（默认为空）
+    timeout: 10000
+    lettuce:
+      pool:
+        max-active: 8
+        max-wait: -1ms
+        min-idle: 0
+        max-idle: 8
+      #      cluster:
+      #        refresh:
+      #          adaptive: true
+      shutdown-timeout: 100
+  rabbitmq: #rabbitmq相关配置
+    host: 218.78.33.135
+    port: 5672
+    username: guest
+    password: guest
+  elasticsearch:
+    rest:
+      uris: 218.78.33.135:9200
+  data:
+    mongodb:
+      database: log
+      host: 218.78.33.135
+      port: 27017
+  servlet:
+    multipart:
+      enabled: true #开启文件上传
+      max-file-size: 10MB #限制文件上传大小为10M
+jwt:
+  tokenHeader: Authorization
+  tokenHead: Bearer
+  expiration: 3600
+  secret: gradution
+
+mybatis-plus:
+  mapper-locations:
+    - classpath:mapper/*.xml
+  type-aliases-package: com/chat/chat-user/entity
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl
+
+logging:
+  config: classpath:logback-spring.xml
+
+feign:
+  okhttp:
+    enabled: true
+ribbon:
+  ConnectTimeout: 3000 #服务请求连接超时时间（毫秒）
+  ReadTimeout: 3000 #服务请求处理超时时间（毫秒）

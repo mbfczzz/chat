@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/chat-auth/chat-auth.iml" filepath="$PROJECT_DIR$/chat-auth/chat-auth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chat-common/chat-common.iml" filepath="$PROJECT_DIR$/chat-common/chat-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chat-gateway/chat-gateway.iml" filepath="$PROJECT_DIR$/chat-gateway/chat-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chat-msg/chat-msg.iml" filepath="$PROJECT_DIR$/chat-msg/chat-msg.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chat-user/chat-user.iml" filepath="$PROJECT_DIR$/chat-user/chat-user.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/new-chat.iml" filepath="$PROJECT_DIR$/.idea/new-chat.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,7 @@
+server:
+  port: 1026
+spring:
+  application:
+    name: gateway
+  profiles:
+    active: dev

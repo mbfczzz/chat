@@ -1,0 +1,73 @@
+spring:
+  mail:
+    host: smtp.163.com
+    port: 25
+    username: a317242392@163.com
+    password: PFVJAMRDRGMVXULY
+    protocol: smtp
+    default-encoding: UTF-8
+  application:
+    name: msg
+  cloud:
+    nacos:
+      discovery:
+      server-addr: 218.78.33.135:8848
+  redis:
+    database: 0
+    host: 218.78.33.135        # Redis服务器地址
+    port: 6379              # Redis服务器连接端口
+    password: mbfczzzz              # Redis服务器连接密码（默认为空）
+    timeout: 10000
+    lettuce:
+      pool:
+        max-active: 8
+        max-wait: -1ms
+        min-idle: 0
+        max-idle: 8
+      #      cluster:
+      #        refresh:
+      #          adaptive: true
+      shutdown-timeout: 100
+  rabbitmq: #rabbitmq相关配置
+    host: 218.78.33.135
+    port: 5672
+    username: guest
+    password: guest
+  elasticsearch:
+    rest:
+      uris: 218.78.33.135:9200
+  data:
+    mongodb:
+      database: log
+      host: 218.78.33.135
+      port: 27017
+  datasource:
+    url: jdbc:mysql://localhost:3306/chat?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      initial-size: 5 #连接池初始化大小
+      min-idle: 10 #最小空闲连接数
+      max-active: 20 #最大连接数
+      web-stat-filter:
+        exclusions: "*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*" #不统计这些请求数据
+      stat-view-servlet: #访问监控网页的登录用户名和密码
+        login-username: druid
+        login-password: druid
+    driver-class-name: com.mysql.jdbc.Driver
+mybatis-plus:
+  mapper-locations:
+    - classpath:mybatis/*.xml
+  type-aliases-package: com/chat/chat-msg/pojo
+
+netty:
+  websocket:
+    # Websocket服务端口
+    port: 1324
+    # 绑定的网卡
+    ip: 0.0.0.0
+    # 消息帧最大体积
+    max-frame-size: 10240
+    # URI路径
+    path: /channel
