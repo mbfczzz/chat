@@ -12,7 +12,7 @@ spring:
           enabled: true
           lower-case-service-id: true #使用小写service-id
       routes: #配置路由路径
-        - id: admin
+        - id: user
           uri: lb://user
           predicates:
             - Path=/user/**

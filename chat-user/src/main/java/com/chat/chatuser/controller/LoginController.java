@@ -8,12 +8,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/login")
 public class LoginController {
 
     @Autowired
     private LoginServiceI loginServiceI;
 
+    @RequestMapping("/login")
     public CommonResult login(UserModelDto userDto){
         return loginServiceI.Login(userDto);
     }
