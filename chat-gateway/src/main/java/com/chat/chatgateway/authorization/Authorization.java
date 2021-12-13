@@ -41,6 +41,7 @@ public class Authorization implements ReactiveAuthorizationManager<Authorization
     @SneakyThrows
     @Override
     public Mono<AuthorizationDecision> check(Mono<Authentication> mono, AuthorizationContext authorizationContext) {
+        System.out.println("访问网关");
         ServerHttpRequest request = authorizationContext.getExchange().getRequest();
         URI uri = request.getURI();
         PathMatcher pathMatcher = new AntPathMatcher();

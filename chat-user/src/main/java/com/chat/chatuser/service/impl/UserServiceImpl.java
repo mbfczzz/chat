@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -29,20 +30,20 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
     @Override
     public void addDefaultUser(User user) {
         user.setUsername("Summoner");
-        user.setCreateTime(LocalDateTime.now());
-        user.setUpdateTime(LocalDateTime.now());
-        user.setValid(true);
+        user.setCreateTime(new Date());
+        user.setUpdateTime(new Date());
+        user.setIsValid(true);
         AssertsUtil.isTrue( 0 == userMapper.insert(user),"添加默认用户失败!");
     }
 
     @Override
     public UserDto loadByUsername(String userName) {
         QueryWrapper<User> queryWrapper = new QueryWrapper<>();
-        queryWrapper.eq("user_name",userName);
+        queryWrapper.eq("username",userName);
         User user = userMapper.selectOne(queryWrapper);
         UserDto userDto = new UserDto();
         userDto.setUserName(userName);
-        userDto.setId(user.getId().toString());
+        userDto.setId(user.getId());
         userDto.setPassword(user.getPassword());
         List list = new ArrayList();
         list.add("chat");

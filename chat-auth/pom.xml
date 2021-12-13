@@ -29,10 +29,6 @@
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-starter-data-elasticsearch</artifactId>
                 </exclusion>
-                <exclusion>
-                    <groupId>org.springframework.amqp</groupId>
-                    <artifactId>spring-rabbit</artifactId>
-                </exclusion>
             </exclusions>
         </dependency>
         <!--web支持-->

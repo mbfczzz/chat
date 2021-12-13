@@ -1,7 +1,8 @@
 package com.chat.chatcommon.config;
 
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.amqp.core.*;
+import org.springframework.amqp.core.AcknowledgeMode;
+import org.springframework.amqp.core.Message;
 import org.springframework.amqp.rabbit.config.SimpleRabbitListenerContainerFactory;
 import org.springframework.amqp.rabbit.connection.CachingConnectionFactory;
 import org.springframework.amqp.rabbit.connection.CorrelationData;
@@ -9,7 +10,6 @@ import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter;
 import org.springframework.amqp.support.converter.MessageConverter;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.amqp.SimpleRabbitListenerContainerFactoryConfigurer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -17,24 +17,6 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @Slf4j
 public class RabbitMqConfig {
-    @Value("${gradution-msg-websocket-queue-name}")
-    private  String websocketQueueName;
-    @Value("${gradution-log-queue-name}")
-    private  String queueName;
-    @Value("${gradution-register-queue-name}")
-    private  String registerQueueName;
-    @Value("${gradution-log-exchange-name}")
-    private  String exchange;
-    @Value("${gradution-register-exchange-name}")
-    private  String registerExchange;
-    @Value("${gradution-msg-websocket-exchange-name}")
-    private  String websocketExchange;
-    @Value("${gradution-log-bind-key}")
-    private  String key;
-    @Value("${gradution-register-bind-key}")
-    private  String registerKey;
-    @Value("${gradution-msg-websocket-bind-key}")
-    private  String websocketKey;
 
     @Autowired
     private CachingConnectionFactory connectionFactory;
@@ -95,49 +77,5 @@ public class RabbitMqConfig {
         factory.setAcknowledgeMode(AcknowledgeMode.MANUAL);
         return factory;
 
-    }
-
-    @Bean
-    public Queue logQueue(){
-        return  new Queue(queueName,true);
-    }
-
-    @Bean
-    public Queue registerQueue(){
-        return  new Queue(registerQueueName,true);
-    }
-    @Bean
-    public Queue websocketQueue(){
-        return  new Queue(websocketQueueName,true);
-    }
-
-    @Bean
-    public DirectExchange directExchange(){
-        return  new DirectExchange(exchange,true,false);
-    }
-
-    @Bean
-    public DirectExchange registerDirectExchange(){
-        return  new DirectExchange(registerExchange,true,false);
-    }
-
-    @Bean
-    public DirectExchange webSocketDirectExchange(){
-        return  new DirectExchange(websocketExchange,true,false);
-    }
-
-    @Bean
-    public Binding binding(){
-        return BindingBuilder.bind(logQueue()).to(directExchange()).with(key);
-    }
-
-    @Bean
-    public Binding registerBinding(){
-        return BindingBuilder.bind(registerQueue()).to(registerDirectExchange()).with(registerKey);
-    }
-
-    @Bean
-    public Binding websocketBinding(){
-        return BindingBuilder.bind(websocketQueue()).to(webSocketDirectExchange()).with(websocketKey);
     }
 }

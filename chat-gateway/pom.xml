@@ -36,10 +36,6 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-web</artifactId>
             </exclusion>
-            <exclusion>
-                <groupId>org.springframework.amqp</groupId>
-                <artifactId>spring-rabbit</artifactId>
-            </exclusion>
             </exclusions>
         </dependency>
         <!--注册中心-->

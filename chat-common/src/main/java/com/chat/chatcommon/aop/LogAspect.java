@@ -34,7 +34,7 @@ import java.util.Date;
 public class LogAspect {
     @Autowired
     private RabbitTemplate rabbitTemplate;
-    @Pointcut("@annotation(jz.cdgy.common.annotion.WebLog)")
+    @Pointcut("@annotation(com.chat.chatcommon.annotion.WebLog)")
     public void logCut(){
 
     }
@@ -63,7 +63,7 @@ public class LogAspect {
         if(StrUtil.isEmpty(userStr)){
             arrayList.forEach(s->{
                 if(s instanceof UserModel){
-                    es.setOperator(((UserModel) s).getUserName());
+                    es.setOperator(((UserModel) s).getUsername());
                 }
                 else {
                     throw new ParamException(StatusCode.UN_LOGIN.getMessage());

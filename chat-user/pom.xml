@@ -14,6 +14,12 @@
     <name>chat-user</name>
 
     <dependencies>
+        <!--mybatis plus-->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>3.2.0</version>
+        </dependency>
         <!-- 模版引擎 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>

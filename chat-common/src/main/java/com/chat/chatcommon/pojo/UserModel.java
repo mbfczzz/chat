@@ -11,7 +11,7 @@ public class UserModel {
     //id
     private Integer id;
     //用户命
-    private String  userName;
+    private String  username;
     //密码
     private String password;
     //手机号

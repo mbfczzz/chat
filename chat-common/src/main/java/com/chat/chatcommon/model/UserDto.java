@@ -11,7 +11,7 @@ import java.util.List;
 @NoArgsConstructor
 public class UserDto {
     private String userName;
-    private String id;
+    private Integer id;
     private String clientId;
     private String password;
     private List<String> authorities;

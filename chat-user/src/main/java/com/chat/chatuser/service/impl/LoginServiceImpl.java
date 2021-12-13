@@ -14,10 +14,12 @@ import com.chat.chatuser.service.IUserService;
 import com.chat.chatuser.service.LoginServiceI;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
 import java.util.Map;
 
+@Service
 public class LoginServiceImpl implements LoginServiceI {
 
     @Autowired
@@ -55,7 +57,7 @@ public class LoginServiceImpl implements LoginServiceI {
         params.put("client_id", "APP");
         params.put("client_secret","123456");
         params.put("grant_type","password");
-        params.put("user",user.getUsername());
+        params.put("username",user.getUsername());
         params.put("password",user.getPassword());
         return params;
     }
@@ -74,9 +76,8 @@ public class LoginServiceImpl implements LoginServiceI {
         Map<String, String> params = new HashMap<>();
         params.put("client_id", "APP");
         params.put("client_secret","123456");
-        params.put("type","123456");
         params.put("grant_type","password");
-        params.put("user",user.getUsername());
+        params.put("username",user.getUsername());
         params.put("password",user.getPassword());
         return params;
     }
@@ -85,9 +86,8 @@ public class LoginServiceImpl implements LoginServiceI {
         Map<String, String> params = new HashMap<>();
         params.put("client_id", "APP");
         params.put("client_secret","123456");
-        params.put("type","123456");
         params.put("grant_type","password");
-        params.put("user",userDto.getUserName());
+        params.put("username",userDto.getUsername());
         params.put("password",userDto.getPassword());
         return params;
     }
