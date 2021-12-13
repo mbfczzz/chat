@@ -1,0 +1,56 @@
+2021-12-13 10:30:02.644 [main] INFO  com.chat.chatuser.ChatUserApplication - The following profiles are active: dev
+2021-12-13 10:30:03.579 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.chat.chatuser]' package. Please check your configuration.
+2021-12-13 10:30:03.859 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-12-13 10:30:03.861 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2021-12-13 10:30:03.880 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14ms. Found 0 Elasticsearch repository interfaces.
+2021-12-13 10:30:03.884 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-12-13 10:30:03.885 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2021-12-13 10:30:03.892 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6ms. Found 0 Reactive Elasticsearch repository interfaces.
+2021-12-13 10:30:03.898 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-12-13 10:30:03.898 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2021-12-13 10:30:03.905 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7ms. Found 0 MongoDB repository interfaces.
+2021-12-13 10:30:03.915 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-12-13 10:30:03.917 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-12-13 10:30:03.931 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6ms. Found 0 Redis repository interfaces.
+2021-12-13 10:30:04.023 [main] WARN  o.springframework.boot.actuate.endpoint.EndpointId - Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2021-12-13 10:30:04.214 [main] INFO  o.springframework.cloud.context.scope.GenericScope - BeanFactory id=040f113d-d89c-3035-a53b-25c868ce856e
+2021-12-13 10:30:04.701 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 1028 (http)
+2021-12-13 10:30:04.713 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-1028"]
+2021-12-13 10:30:04.714 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-12-13 10:30:04.714 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.35]
+2021-12-13 10:30:04.925 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-12-13 10:30:04.925 [main] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2264 ms
+2021-12-13 10:30:05.046 [main] WARN  o.springframework.boot.actuate.endpoint.EndpointId - Endpoint ID 'nacos-discovery' contains invalid characters, please migrate to a valid format.
+2021-12-13 10:30:05.123 [main] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2021-12-13 10:30:05.123 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-12-13 10:30:05.128 [main] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2021-12-13 10:30:05.129 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-12-13 10:30:05.345 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-12-13 10:30:05.621 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2021-12-13 10:30:05.748 [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2021-12-13 10:30:06.117 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2021-12-13 10:30:07.276 [main] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[218.78.33.135:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2021-12-13 10:30:07.363 [cluster-ClusterId{value='61b6b02f2437c06915ab9625', description='null'}-218.78.33.135:27017] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:1, serverValue:873}] to 218.78.33.135:27017
+2021-12-13 10:30:07.379 [cluster-ClusterId{value='61b6b02f2437c06915ab9625', description='null'}-218.78.33.135:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=218.78.33.135:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=12660600}
+2021-12-13 10:30:07.405 [main] WARN  org.springframework.data.convert.CustomConversions - Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2021-12-13 10:30:07.428 [main] WARN  org.springframework.data.convert.CustomConversions - Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2021-12-13 10:30:07.788 [main] WARN  org.springframework.data.convert.CustomConversions - Registering converter from class org.springframework.data.geo.Point to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2021-12-13 10:30:07.788 [main] WARN  org.springframework.data.convert.CustomConversions - Registering converter from interface java.util.Map to class org.springframework.data.geo.Point as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2021-12-13 10:30:07.788 [main] WARN  org.springframework.data.convert.CustomConversions - Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2021-12-13 10:30:07.788 [main] WARN  org.springframework.data.convert.CustomConversions - Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2021-12-13 10:30:07.929 [main] INFO  o.s.data.elasticsearch.support.VersionInfo - Version Spring Data Elasticsearch: 4.0.0.RELEASE
+2021-12-13 10:30:07.929 [main] INFO  o.s.data.elasticsearch.support.VersionInfo - Version Elasticsearch Client in build: 7.6.2
+2021-12-13 10:30:07.929 [main] INFO  o.s.data.elasticsearch.support.VersionInfo - Version Elasticsearch Client used: 7.6.2
+2021-12-13 10:30:07.929 [main] INFO  o.s.data.elasticsearch.support.VersionInfo - Version Elasticsearch cluster: 7.7.0
+2021-12-13 10:30:07.929 [main] WARN  o.s.data.elasticsearch.support.VersionInfo - Version mismatch in between Elasticsearch Client and Cluster: 7.6.2 - 7.7.0
+2021-12-13 10:30:08.285 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-12-13 10:30:08.413 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-1028"]
+2021-12-13 10:30:08.434 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 1028 (http) with context path ''
+2021-12-13 10:30:08.601 [main] INFO  c.a.cloud.nacos.registry.NacosServiceRegistry - nacos registry, DEFAULT_GROUP user 192.168.10.99:1028 register finished
+2021-12-13 10:30:08.770 [main] INFO  com.chat.chatuser.ChatUserApplication - Started ChatUserApplication in 7.449 seconds (JVM running for 9.404)
+2021-12-13 10:30:08.948 [RMI TCP Connection(1)-192.168.10.99] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-12-13 10:30:08.948 [RMI TCP Connection(1)-192.168.10.99] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-12-13 10:30:08.957 [RMI TCP Connection(1)-192.168.10.99] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 9 ms
+2021-12-13 10:30:09.103 [RMI TCP Connection(3)-192.168.10.99] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [218.78.33.135:5672]
+2021-12-13 10:30:09.324 [RMI TCP Connection(3)-192.168.10.99] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#6b3b2c34:0/SimpleConnection@59d7d169 [delegate=amqp://guest@218.78.33.135:5672/, localPort= 61484]
+2021-12-13 10:30:09.593 [RMI TCP Connection(3)-192.168.10.99] INFO  org.mongodb.driver.connection - Opened connection [connectionId{localValue:2, serverValue:874}] to 218.78.33.135:27017
