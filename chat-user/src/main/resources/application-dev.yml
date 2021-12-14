@@ -22,7 +22,7 @@ spring:
       stat-view-servlet: #访问监控网页的登录用户名和密码
         login-username: druid
         login-password: druid
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
   redis:
     database: 0
     host: 218.78.33.135        # Redis服务器地址
